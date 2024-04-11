@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <!--css: make it look pretty-->
+    <style>
+        body {
+            background-color: #222222;
+            color: black;
+            background: url(index_files/Home%20Page_Images/Background.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position:center center;
+            height: 100%
+        }
+        a:link {
+            color: blue;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color: blueviolet;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover {
+            color: green;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:active {
+            color: orange;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        .window {
+            height: auto;
+            border: 2px solid blue;
+            border-radius: 5px;
+            margin: 0 auto;
+            background-color: #C0C0C0;
+        }
+        .title-bar {
+            background-color: rgba(0, 0, 0, 0);
+            background-repeat: repeat;
+            background-attachment: scroll;
+            background-image: linear-gradient(rgb(9, 151, 255), rgb(0, 83, 238) 8%, rgb(0, 80, 238) 40%, rgb(0, 102, 255) 88%, rgb(0, 102, 255) 93%, rgb(0, 91, 255) 95%, rgb(0, 61, 215) 96%, rgb(0, 61, 215));
+            background-size: auto;
+            background-origin: padding-box;
+            background-clip: border-box;
+            display: flex;
+        }
+        .title-bar-text {
+            float: left;
+        }
+        .speaker {
+        position: fixed;
+        top: 100%;
+        left: 80px;
+        transform: translate(-100%, -100%);
+        max-height: 50px;
+        max-width: 50px;
+        cursor: pointer;
+        padding: 20px;
+        }
+        a {
+            font-size: 15px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .url .icon {
+            padding: 0px 3px;
+        }
+        .url input {
+            width: 100%;
+        }
+        .url {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            box-sizing: border-box;
+            flex-wrap: nowrap;
+        }
+        
+    </style>
+    
+    <!--scripts-->
+    <script>
+    function play_sound() {
+        var audio = document.getElementById("bg_sound");
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      }
+    function toggleFullScreen() {
+        if (!document.fullscreenElement && // alternative standard method
+          !document.mozFullScreenElement && !document.webkitFullscreenElement) { // current working methods
+          if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+          } else if (document.documentElement.mozRequestFullScreen) {
+            document.documentElement.mozRequestFullScreen();
+          } else if (document.documentElement.webkitRequestFullscreen) {
+            document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+          }
+        } else {
+          if (document.cancelFullScreen) {
+            document.cancelFullScreen();
+          } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+          } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+          }
+        }
+      }
+        
+    </script>
+    
+    <!--metadata-->
+    <head>
+
+        <!--tab title-->
+        <title>Alex Mitch's Website</title>
+
+        <!--tab icon/favicon-->
+        <link rel="shortcut icon" type="x-icon" href="/index_files/Home%20Page_Images/Welcome%20To%20My%20Page.gif">
+        
+        <link rel="stylesheet"href="https://unpkg.com/xp.css">
+        
+        <audio id="bg_sound" src="https://archive.org/download/WindowsXPInstallationMusic/Windows%20XP%20Installation%20Music.mp3" preload="none"></audio>
+    </head>
+    
+    <!--elements-->
+    <body>
+        
+        <script>
+        window['CboxReady'] = function (Cbox) {
+            Cbox('button', '3-3536303-15MUwv');
+        }
+        </script>
+        <script src="https://static.cbox.ws/embed/2.js" async>
+        </script>
+        
+        <img class="speaker" src="/index_files/Home%20Page_Images/speaker.png" onclick="play_sound()">
+        
+        <div class="window" style="width: 750px;">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="/index_files/Home%20Page_Images/Welcome%20To%20My%20Page.gif" style="height:14px"> <b><font color="white">Alex Mitch's Guestbook - Internet Explorer</font></b>
+                </div>
+                <div class="title-bar-controls" style="float:right">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize" onclick="toggleFullScreen()"></button>
+                    <button aria-label="Close" onclick="window.history.back()"></button>
+                </div>
+            </div>
+            <div class="url">
+          <img class="icon" src="index_files/Resources/ie_page.png" style="height:20px;"><input type="text" value="https://alex-mitch.neocities.org/Guestbook" style="width:721px" disabled>
+        </div>
+            <div class="window-body">
+            <p style="color:red;"><b>Guestbook is currently not functional, as from the news on Ayano's website, Neocities doesn't support 3rd party website data for non-subscription acccounts. If you want to suggest something that would work better, please do so in the chatbox. I'm still looking around at the moment.</b></p>
+            <br>
+    				<a href="https://virtualobserver.moe/ayano/comment-widget">Comment Widget by Ayano</a>
+            <div id="c_widget"></div>
+            	<script src="/js/comment-widget-dark/comment-widget.js"></script>
+            </div>
+        </div>
+    </body>
+</html>
