@@ -54,150 +54,127 @@
 */
 
 /* Main */
+#c_widget a { color: var(--link-color);}
+#c_widget a:hover {color: var(--border-color1);}
+#c_widget a:visited { color: var(--link-visited);}
+
 #c_widget {
+    font-family: var(--secondary-font);
     box-sizing: border-box;
-    height: 100%;
+    font-size: 14px;
     overflow: auto;
-    padding: 20px;
-    background-image: url('sparkle-bg.gif'); /* F2U background provided by https://sadgrl.online/webmastery/downloads/tiledbgs */
-    background-attachment: fixed;
-    font-family: 'Courier New';
-    font-size: 16px;
-    color: white;
+    height: 100%;    
 }
 
 #c_widget button, #c_widget input[type=submit] {
-    padding: 4px;
-    font-family: 'Courier New';
+    border: 1px solid var(--shadow-color1);
+    font-family: var(--secondary-font);
+    color: var(--link-visited);
+    background-color: white;
     text-decoration: none;
-	text-align: center;
-    text-transform: uppercase;
-    background-color: black;
-    color: #B766FF;
-    border: 1px solid white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 4px;
 }
+
 #c_widget button:hover, #c_widget input[type=submit]:hover {
+    background-color: var(--border-color1);
     color: white;
-    border: 1px solid #B766FF;
+    border: 1px solid var(--border-color1);
 }
 #c_widget button:disabled, #c_widget input[type=submit]:disabled {opacity: 60%;}
 #c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover {
-    color: #B766FF;
-    border: 1px solid white;
+    background-color: white;
+    color: var(--link-visited);
+    border: 1px solid var(--shadow-color1);
 }
 
 /* Input section */
 #c_inputDiv {
-    margin-bottom: 15px;
     padding: 10px;
-    background-color: black;
-    border: 2px solid white;
+    background: var(--innerbox-color2);
+    border: 1px dashed var(--shadow-color1);
+    border-radius: 5px;
 }
+#c_container { margin-top: 10px;}
+#c_widgetTitle { margin: 0; padding: 0;}
+#c_nameWrapper, #c_websiteWrapper{ text-align: left; margin: 5px;}
 
-#c_widgetTitle {
-    margin: -10px;
-    margin-bottom: 10px;
-    padding: 5px;
-    text-transform: uppercase;
-    font-style: italic;
-    font-weight: bold;
-    text-align: right;
-    background-color: #2D0B52;
-}
-
-.c-inputWrapper {
-    display: block;
-    text-align: right;
-}
+.c-inputWrapper { display: block; margin-top: 5px; margin-bottom: 5px;}
 .c-input {
     padding: 4px;
-    color: black;
-    border: 1px solid #2D0B52;
+    color: var(--text-color);
+    border-radius: 4px;
+    border: 1px solid var(--shadow-color1);
 	outline: none;
 }
-.c-input:focus {border: 1px solid #B766FF;}
+.c-input:focus {border: 1px solid var(--border-color1);}
 
 .c-textInput {
     width: calc(100% - 10px);
     max-width: 900px;
     resize: none;
+    height: 100px;
+    font-weight: bold;
+    color: var(--title-color);
+    background: var(--box-gradient2);
 }
-#c_submitButton {
-    display: block; 
-    margin-left: auto; 
-    margin-right: 0;
-}
-#c_replyingText {
-    color: white;
-    text-align: right;
-}
+#c_submitButton { display: block; margin: 0px 5px;}
+
+#c_replyingText { color: var(--text-color);}
 
 /* Comment section */
 .c-comment {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 2px solid white;
-    background-color: #2D0B52; 
-}
-.c-reply {
-    display: block;
-    width: 90%;
+    border: 1px dashed var(--shadow-color1);
+    background: var(--accentbox-color);
     margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: 0;
-    padding: 10px;
-    border: 2px solid white;
-    background-color: #2D0B52; 
-}
-.c-reply:last-child {margin-bottom: 0;}
-.c-replyContainer {
-    margin: -10px;
+    border-radius: 4px;
+    text-align: left;
     margin-top: 10px;
     padding: 10px;
-    background-color: black;
 }
+
+.c-reply {
+    border: 1px dashed var(--shadow-color1);
+    background: var(--accentbox-border);
+    margin-bottom: 10px;
+    border-radius: 4px;
+    margin-top: 10px;    
+    padding: 10px;
+}
+.c-reply:last-child { margin-bottom: 0;}
 
 .c-name {
     display: inline-block;
     margin: 0;
     margin-right: 10px;
     padding: 0;
-    text-transform: uppercase;
-    font-weight: bold;
+    text-shadow: none;
+    font-size: 18px;
+    background: var(--coolbox-gradient);
+    border-radius: 10px;
+    color: var(--text-color);
 }
-.c-site {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #B766FF;
-}
-.c-site:hover {color: white;}
-.c-timestamp {
-    float: right;
-    opacity: 75%;
-}
+.c-site { font-weight: 100;}
+.c-site:hover { color: var(--border-color1);}
+.c-timestamp { float: right; opacity: 60%;}
 .c-text {
     margin: 0;
-    margin-left: -10px;
-    margin-right: -10px;
-    padding: 10px;
-    font-family: Verdana;
-    font-size: 14px;
+    margin-top: 10px;
+    padding: 0;
     text-align: justify;
-    color: white;
-    background-color: black;
+    color: var(--text-color);
+    font-family: var(--primary-font);
 }
 
 /* Pagination */
-#c_pagination {text-align: center;}
+#c_pagination { text-align: center;}
 .c-replyButton {
-    margin-top: 10px;
-    margin-right: 4px;
+  margin-top: 10px;
+  box-shadow: none;
+  text-shadow: none;
+  font-size: 14px;
 }
-.c-expandButton {
-    margin-top: 10px;
-    margin-left: 4px;
-}
-.c-paginationButton {
-    margin-right: 4px;
-    margin-left: 4px;
+.c-expandButton { float: right; margin-top: 10px;}
+.c-paginationButton { margin-right: 4px; margin-left: 4px; background: var(--btn-hover) !important }
 }
