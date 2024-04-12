@@ -39,7 +39,6 @@
     The comment section:
         .c-comment - All comment <div>s
         .c-reply - All reply <div>s (contained within parent comment <div>s)
-        .c-replyContainer - The wrapper <div> for all replies
         .c-name - The name of the person submitting the comment/reply (an <h3> element)
         .c-timestamp - The timestamp of when the comment/reply was made (a <span> element)
         .c-site - The website linked at the top of the comment/reply (an <a> element)
@@ -54,6 +53,7 @@
 */
 
 /* Main */
+
 #c_widget a { color: var(--link-color);}
 #c_widget a:hover {color: var(--border-color1);}
 #c_widget a:visited { color: var(--link-visited);}
@@ -177,4 +177,3 @@
 }
 .c-expandButton { float: right; margin-top: 10px;}
 .c-paginationButton { margin-right: 4px; margin-left: 4px; background: var(--btn-hover) !important }
-}
