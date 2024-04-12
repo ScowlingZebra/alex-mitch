@@ -39,6 +39,7 @@
     The comment section:
         .c-comment - All comment <div>s
         .c-reply - All reply <div>s (contained within parent comment <div>s)
+        .c-replyContainer - The wrapper <div> for all replies
         .c-name - The name of the person submitting the comment/reply (an <h3> element)
         .c-timestamp - The timestamp of when the comment/reply was made (a <span> element)
         .c-site - The website linked at the top of the comment/reply (an <a> element)
@@ -58,26 +59,18 @@
     height: 100%;
     overflow: auto;
     padding: 20px;
-    background-image: url('sparkle-bg.gif'); /* F2U background provided by https://sadgrl.online/webmastery/downloads/tiledbgs */
-    background-attachment: fixed;
-    font-family: 'Courier New';
-    font-size: 16px;
-    color: white;
 }
 
 #c_widget button, #c_widget input[type=submit] {
     padding: 4px;
-    font-family: 'Courier New';
     text-decoration: none;
 	text-align: center;
     text-transform: uppercase;
-    background-color: black;
-    color: #B766FF;
     border: 1px solid white;
 }
 #c_widget button:hover, #c_widget input[type=submit]:hover {
     color: white;
-    border: 1px solid #B766FF;
+    border: 1px solid #4995ff;
 }
 #c_widget button:disabled, #c_widget input[type=submit]:disabled {opacity: 60%;}
 #c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover {
@@ -89,7 +82,6 @@
 #c_inputDiv {
     margin-bottom: 15px;
     padding: 10px;
-    background-color: black;
     border: 2px solid white;
 }
 
@@ -98,15 +90,13 @@
     margin-bottom: 10px;
     padding: 5px;
     text-transform: uppercase;
-    font-style: italic;
     font-weight: bold;
-    text-align: right;
-    background-color: #2D0B52;
+    text-align: left;
 }
 
 .c-inputWrapper {
     display: block;
-    text-align: right;
+    text-align: left;
 }
 .c-input {
     padding: 4px;
@@ -114,7 +104,7 @@
     border: 1px solid #2D0B52;
 	outline: none;
 }
-.c-input:focus {border: 1px solid #B766FF;}
+.c-input:focus {border: 1px solid #4995ff;}
 
 .c-textInput {
     width: calc(100% - 10px);
@@ -123,8 +113,8 @@
 }
 #c_submitButton {
     display: block; 
-    margin-left: auto; 
-    margin-right: 0;
+    margin-left: 0; 
+    margin-right: auto;
 }
 #c_replyingText {
     color: white;
@@ -179,7 +169,6 @@
     margin-left: -10px;
     margin-right: -10px;
     padding: 10px;
-    font-family: Verdana;
     font-size: 14px;
     text-align: justify;
     color: white;
