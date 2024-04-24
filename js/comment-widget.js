@@ -17,14 +17,14 @@
 */
 
 // The values in this section are REQUIRED for the widget to work! Keep them in quotes!
-const s_stylePath = 'PATH HERE';
-const s_formId = '1FAIpQLScP_7deXazA4AgnzrImoH91TVOVqExbcjH6oZGKqM1NPULVcw';
-const s_nameId = '325754428';
-const s_websiteId = '865237188';
-const s_textId = '1401521549';
-const s_pageId = '1149794998';
-const s_replyId = '1689189878';
-const s_sheetId = '1Y9TwSjbsRq2KS7Av8vOMeyrx5aUj9zzrpo1hLs0IHdQ';
+const s_stylePath = 'js/comment-widget-dark/comment-widget-dark.css';
+const s_formId = '1FAIpQLScpL6TWUV-FpUesRIrfx5lBH8csIUxbIVYo0h-Y0H6qFi0Zcg';
+const s_nameId = '1535135393';
+const s_websiteId = '623670758';
+const s_textId = '2127909228';
+const s_pageId = '16108000';
+const s_replyId = '854354114';
+const s_sheetId = '1-i11NxI9Ypi9PzNkEZ_qoVkFwi9RJvhU4TDvlA9GxLM';
 
 // The values below are necessary for accurate timestamps, I've filled it in with EST as an example
 const s_timezone = -5; // Your personal timezone (Example: UTC-5:00 is -5 here, UTC+10:30 would be 10.5)
@@ -47,7 +47,7 @@ const s_fixRarebitIndexPage = false; // If using Rarebit, change to true to make
 const s_wordFilterOn = false; // True for on, false for off
 const s_filterReplacement = '****'; // Change what filtered words are censored with (**** is the default)
 const s_filteredWords = [ // Add words to filter by putting them in quotes and separating with commas (ie. 'heck', 'dang')
-    'heck', 'dang'
+    
 ]
 
 // Text - Change what messages/text appear on the form and in the comments section (Mostly self explanatory)
