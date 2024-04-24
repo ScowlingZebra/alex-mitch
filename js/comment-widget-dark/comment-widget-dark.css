@@ -69,7 +69,7 @@
     border: 1px solid white;
 }
 #c_widget button:hover, #c_widget input[type=submit]:hover {
-    color: white;
+    color: #4995ff;
     border: 1px solid #4995ff;
 }
 #c_widget button:disabled, #c_widget input[type=submit]:disabled {opacity: 60%;}
@@ -117,8 +117,10 @@
     margin-right: auto;
 }
 #c_replyingText {
-    color: white;
-    text-align: right;
+    color: black;
+    text-align: center;
+	font-weight: bold;
+	font-size: 20px;
 }
 
 /* Comment section */
@@ -126,7 +128,7 @@
     margin-bottom: 15px;
     padding: 10px;
     border: 2px solid white;
-    background-color: #2D0B52; 
+    background-color: transparent; 
 }
 .c-reply {
     display: block;
@@ -136,7 +138,7 @@
     margin-right: 0;
     padding: 10px;
     border: 2px solid white;
-    background-color: #2D0B52; 
+    background-color: transparent; 
 }
 .c-reply:last-child {margin-bottom: 0;}
 .c-replyContainer {
@@ -171,8 +173,8 @@
     padding: 10px;
     font-size: 14px;
     text-align: justify;
-    color: white;
-    background-color: black;
+    background-color: transparent;
+	font-weight: bold;
 }
 
 /* Pagination */
