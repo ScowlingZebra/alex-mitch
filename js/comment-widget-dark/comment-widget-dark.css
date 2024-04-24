@@ -138,7 +138,7 @@
     margin-left: auto;
     margin-right: 0;
     padding: 10px;
-    border: 2px solid white;
+    border: 2px solid #4995ff;
     background-color: transparent; 
 }
 .c-reply:last-child {margin-bottom: 0;}
@@ -146,7 +146,7 @@
     margin: -10px;
     margin-top: 10px;
     padding: 10px;
-    background-color: black;
+    background-color: transparent;
 }
 
 .c-name {
