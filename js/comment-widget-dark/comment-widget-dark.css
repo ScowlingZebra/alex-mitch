@@ -80,7 +80,7 @@
 
 /* Input section */
 #c_inputDiv {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     padding: 10px;
     border: 3px solid #4995ff;
 }
@@ -89,6 +89,7 @@
     margin: -10px;
     margin-bottom: 10px;
     padding: 5px;
+	font-size: 250%;
     text-transform: uppercase;
     font-weight: bold;
     text-align: left;
@@ -153,15 +154,19 @@
     margin: 0;
     margin-right: 10px;
     padding: 0;
+	font-size: 200%;
     text-transform: uppercase;
     font-weight: bold;
 }
 .c-site {
     text-transform: uppercase;
     text-decoration: none;
+	font-weight: bold;
     color: #B766FF;
 }
-.c-site:hover {color: white;}
+.c-site:hover {
+	color: green;
+}
 .c-timestamp {
     float: right;
     opacity: 75%;
