@@ -66,7 +66,7 @@
     text-decoration: none;
 	text-align: center;
     text-transform: uppercase;
-    border: 1px solid white;
+    border: 1px solid black;
 }
 #c_widget button:hover, #c_widget input[type=submit]:hover {
     color: #4995ff;
@@ -82,7 +82,7 @@
 #c_inputDiv {
     margin-bottom: 15px;
     padding: 10px;
-    border: 2px solid white;
+    border: 3px solid #4995ff;
 }
 
 #c_widgetTitle {
@@ -127,7 +127,7 @@
 .c-comment {
     margin-bottom: 15px;
     padding: 10px;
-    border: 2px solid white;
+    border: 2px solid #4995ff;
     background-color: transparent; 
 }
 .c-reply {
